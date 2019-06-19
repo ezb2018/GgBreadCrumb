@@ -1,6 +1,6 @@
 let item = [];
 let count = 1;
-let el = document.createElement('script');
+let el = document.createElement("script");
 el.type = 'application/ld+json';
 
 if ($(".google-breadcrumb").find('li').length > 0) { 
@@ -25,5 +25,5 @@ if ($(".google-breadcrumb").find('li').length > 0) {
         "@type": "BreadcrumbList",
         "itemListElement": item
     });
-    document.getElementsByTagName('head')[0].appendChild(el);
+    $("head").append(el);
 }
