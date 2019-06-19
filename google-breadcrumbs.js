@@ -25,5 +25,5 @@ if ($(".google-breadcrumb").find('li').length > 0) {
         "@type": "BreadcrumbList",
         "itemListElement": item
     });
-    document.head.appendChild(el);
+    document.getElementsByTagName('head')[0].appendChild(el);
 }
