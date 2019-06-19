@@ -4,19 +4,49 @@
     <script id="myJSONID" type="application/ld+json"></script>
   </head>
   <body>
-    <script>
-      var myList = [];
-      function buildMyList() {
-            return ["2 items", "3items", "so on"];
-      }
-      $("#myJSONID").text(function() {
-        return JSON.stringify({
-          "@context": "http://schema.org/",
-          "@type": "Recipe",
-          "recipeIngredients": buildMyList()
-        });
-      });
-    </script>
+    <script type="application/ld+json">
+            {
+            "@context": "http://schema.org/"
+            "@type": "Organization",
+            "name": "Grassland Singapore",
+            "description": "",
+            "aggregateRating":{
+            "@type": "AggregateRating",
+            "ratingValue": "4",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "100"
+            }}
+
+            $
+        </script>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://localhost:44300/en-my"
+            },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Bus Tickets",
+            "item": "https://localhost:44300/en-my/bus"
+            },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Bus Operators",
+            "item": "https://localhost:44300/en-my/bus/operator"
+            },{
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Grassland Singapore",
+            "item": "https://localhost:44300/en-my/bus/operator/grassland-singapore"
+            }]
+            }
+        </script>
     <!--<div class="breadcrumb-wrapper hidden-xs">
       <ul class="breadcrumb google-breadcrumb">
         <li><a href="/en-my">Home</a></li>
